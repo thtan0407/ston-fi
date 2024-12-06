@@ -1,0 +1,206 @@
+:root {
+	--primary-color: #0a68ac;
+	--primary-hover: #0b3375;
+	--primary-rgb: 10, 104, 172;
+	--font-theme: "Inter", Arial, Helvetica, sans-serif;
+	--transition-default: 0.3s all ease-in-out;
+	--size-theme: 14px;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	color: #242526;
+	font-family: var(--font-theme);
+	font-size: var(--size-theme);
+	font-weight: 400;
+	font-style: normal;
+	background-color: var(--bs-white);
+}
+
+a,
+a:hover,
+a:focus {
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	-o-transition: var(--transition-default, 0.3s all ease-in-out);
+	transition: var(--transition-default, 0.3s all ease-in-out);
+	-webkit-transition: var(--transition-default, 0.3s all ease-in-out);
+}
+
+button,
+button:hover,
+button:focus {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	-o-transition: var(--transition-default, 0.3s all ease-in-out);
+	transition: var(--transition-default, 0.3s all ease-in-out);
+	-webkit-transition: var(--transition-default, 0.3s all ease-in-out);
+	cursor: pointer !important;
+}
+
+input,
+select,
+textarea {
+	-o-transition: var(--transition-default, 0.3s all ease-in-out);
+	transition: var(--transition-default, 0.3s all ease-in-out);
+	-webkit-transition: var(--transition-default, 0.3s all ease-in-out);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: none !important;
+	border-color: #66afe9 !important;
+}
+
+.transition-default {
+	-o-transition: var(--transition-default, 0.3s all ease-in-out);
+	transition: var(--transition-default, 0.3s all ease-in-out);
+	-webkit-transition: var(--transition-default, 0.3s all ease-in-out);
+}
+
+.background-cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.image-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.image-contain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.object-fit-cover {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.object-fit-contain {
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+.pseudo {
+	position: relative;
+}
+
+.pseudo:before,
+.pseudo:after {
+	position: absolute;
+	content: '';
+	display: block;
+}
+
+.limit {
+	--line: 2;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
+}
+
+.zi--1 {
+	z-index: -1;
+}
+
+.zi-1 {
+	z-index: 1;
+}
+
+.zi-2 {
+	z-index: 2;
+}
+
+.zi-3 {
+	z-index: 3;
+}
+
+.zi-4 {
+	z-index: 4;
+}
+
+.zi-5 {
+	z-index: 5;
+}
+
+.zi-10 {
+	z-index: 10;
+}
+
+.ratio > img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.ratio-2x1 {
+	--bs-aspect-ratio: 50%;
+}
+
+.ratio-3x2 {
+	--bs-aspect-ratio: calc(2 / 3 * 100%);
+}
+
+.gap-5px {
+	gap: 5px;
+}
+
+.gap-10px {
+	gap: 10px;
+}
+
+.gap-15px {
+	gap: 15px;
+}
+
+.gap-20px {
+	gap: 20px;
+}
+
+.gap-25px {
+	gap: 25px;
+}
+
+.gap-30px {
+	gap: 30px;
+}
+
+.link-default {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	vertical-align: middle;
+	border: 0;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	padding: 0;
+}
