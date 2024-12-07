@@ -17,7 +17,8 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+	      rel="stylesheet">
 
 	<link rel="icon" href="./assets/images/favicon.png">
 	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
@@ -25,17 +26,180 @@
 	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
-
-	<style>
-		:root {
-			--primary-color: #0a68ac;
-			--primary-hover: #0b3375;
-			--primary-rgb: 10, 104, 172;
-			--font-theme: "Inter", Arial, Helvetica, sans-serif
-		}
-	</style>
 </head>
 <body>
+
+<header id="header" class="header position-fixed top-0 start-0 zi-10 transition-default w-100">
+	<div class="container">
+		<div class="header-inner hstack justify-content-between gap-30px">
+			<div class="header-logo flex-shrink-0">
+				<a href="" class="d-inline-flex align-middle">
+					<img src="./assets/images/logo-white.png" alt="" height="40"
+					     class="w-auto mw-100">
+				</a>
+			</div>
+			<div class="header-wrapper d-flex align-items-center flex-column flex-lg-row gap-30px">
+				<div class="header-navigation" id="header-navigation">
+					<ul>
+						<li>
+							<a href="#what-is-candy-swap">
+								What is Candy Swap
+							</a>
+						</li>
+						<li>
+							<a href="#explore">
+								Explore
+							</a>
+						</li>
+						<li>
+							<a href="#developers">
+								Developers
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="./assets/images/icons/export.svg" alt="">
+								Blog
+							</a>
+						</li>
+						<li>
+							<a href="">
+								More
+							</a>
+							<ul>
+								<li>
+									<a href="">
+										Omniston
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Grant program
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Stonbassadors
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Campaigns and airdrops
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Guide
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Documentation
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Join community
+									</a>
+								</li>
+								<li>
+									<a href="">
+										Github
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="">
+								<img src="./assets/images/icons/omniston.svg" alt="">
+								Omniston
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-toolbar hstack gap-10px">
+					<div class="header-language position-relative">
+						<button type="button" class="header-language_button link-default">
+							<span class="header-language_button__value hstack gap-2">
+								<img src="./assets/images/language/eng.svg" class="img-fluid" alt="">
+								ENG
+							</span>
+							<img src="./assets/images/icons/arrow-down.svg" class="img-fluid" alt="">
+						</button>
+						<ul class="header-language_list transition-default position-absolute">
+							<li>
+								<a href="" class="active">
+									<span>
+										English
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>
+										Русский
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>
+										Bahasa Indonesia
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>
+										Tiếng Việt
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header-app transition-default">
+						<a href="" class="button-theme button-theme_primary">
+							<img src="./assets/images/icons/export.svg" alt="">
+							Go to App
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div id="main" class="main">
+	<div class="section-hero">
+		<div class="container">
+			<div class="hero-video position-relative">
+				<video autoplay="" loop="" playsinline="" preload="auto" muted=""
+				       poster="./assets/images/video/poster-video-desktop.jpg">
+					<source src="./assets/images/video/video-desktop.mp4">
+				</video>
+				<div class="hero-video_overlay hero-video_overlay__bottom"></div>
+				<div class="hero-video_overlay hero-video_overlay__left"></div>
+				<div class="hero-video_overlay hero-video_overlay__right"></div>
+
+				<div class="hero-video_content">
+					<div class="hero-video_title">
+						<span>Instantly swap Toncoin</span> for any coin or token at the best rate
+					</div>
+					<div class="hero-video_buttons d-flex gap-15px">
+						<a href="" class="button-theme button-theme_primary">
+							<img src="./assets/images/icons/export.svg" alt="">
+							Go to App
+						</a>
+						<a href="" class="button-theme button-theme_secondary">
+							Learn More
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script type="text/javascript"
         src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>

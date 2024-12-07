@@ -1,21 +1,24 @@
 :root {
-	--primary-color: #0a68ac;
-	--primary-hover: #0b3375;
-	--primary-rgb: 10, 104, 172;
+	--primary-color: #5BDE81;
+	--primary-hover: #4cc46e;
+	--primary-dark: #199f41;
+	--primary-rgb: 91, 222, 129;
 	--font-theme: "Inter", Arial, Helvetica, sans-serif;
 	--transition-default: 0.3s all ease-in-out;
 	--size-theme: 14px;
+	--color-text: #cccccc;
+	--color-hover: #151819;
 }
 
 body {
 	position: relative;
 	width: 100%;
-	color: #242526;
+	color: var(--color-text);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 400;
 	font-style: normal;
-	background-color: var(--bs-white);
+	background-color: #070707;
 }
 
 a,
