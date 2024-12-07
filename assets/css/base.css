@@ -1,7 +1,7 @@
 :root {
 	--primary-color: #5BDE81;
 	--primary-hover: #4cc46e;
-	--primary-dark: #199f41;
+	--primary-light: #c6fcd6;
 	--primary-rgb: 91, 222, 129;
 	--font-theme: "Inter", Arial, Helvetica, sans-serif;
 	--transition-default: 0.3s all ease-in-out;
@@ -19,6 +19,7 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	background-color: #070707;
+	overflow-x: hidden;
 }
 
 a,
@@ -60,7 +61,7 @@ textarea:focus {
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	outline: none !important;
-	border-color: #66afe9 !important;
+	border-color: var(--bs-white) !important;
 }
 
 .transition-default {

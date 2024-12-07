@@ -153,6 +153,33 @@ const handleSwiper = function (elm, obj = {}) {
 
 $(function () {
 	handleHeader();
+
+
+	if ($('#sliderWallet').length > 0) {
+		const elmSwiper = '#sliderWallet';
+		const objSwiper = {
+			loop: true,
+			speed: 500,
+			autoplay: false,
+			slidesPerView: 1,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			navigation: {
+				nextEl: elmSwiper + " .sliderNext",
+				prevEl: elmSwiper + " .sliderPrev",
+			},
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+
+	if ($('[data-bs-toggle="popover"]').length) {
+		$('[data-bs-toggle="popover"]').popover({
+			trigger: 'focus hover',
+			html: true,
+		})
+	}
 });
 
 
