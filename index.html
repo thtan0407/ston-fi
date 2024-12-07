@@ -41,7 +41,28 @@
 					     class="w-auto mw-100">
 				</a>
 			</div>
-			<div class="header-wrapper d-flex align-items-center flex-column flex-lg-row gap-30px">
+			<div class="header-wrapper d-flex align-items-center flex-column flex-lg-row gap-20px">
+				<div class="header-topbar">
+					<div class="header-logo flex-shrink-0">
+						<a href="" class="d-inline-flex align-middle">
+							<img src="./assets/images/logo-white.png" alt="" height="30"
+							     class="w-auto mw-100">
+						</a>
+					</div>
+					<div class="header-app transition-default">
+						<a href="" class="button-theme button-theme_primary">
+							<img src="./assets/images/icons/export.svg" alt="">
+							Go to App
+						</a>
+					</div>
+					<div class="header-hamburger">
+						<button type="button" class="link-default hamburger-button" id="hamburgerSecond">
+						<i></i>
+							<i></i>
+							<i></i>
+						</button>
+					</div>
+				</div>
 				<div class="header-navigation" id="header-navigation">
 					<ul>
 						<li>
@@ -68,6 +89,9 @@
 						<li>
 							<a href="">
 								More
+								<span>
+									<img src="./assets/images/icons/arrow-down.svg" class="img-fluid" alt="">
+								</span>
 							</a>
 							<ul>
 								<li>
@@ -121,7 +145,7 @@
 					</ul>
 				</div>
 				<div class="header-toolbar hstack gap-10px">
-					<div class="header-language position-relative">
+					<div class="header-language header-language_desktop position-relative">
 						<button type="button" class="header-language_button link-default">
 							<span class="header-language_button__value hstack gap-2">
 								<img src="./assets/images/language/eng.svg" class="img-fluid" alt="">
@@ -160,25 +184,82 @@
 							</li>
 						</ul>
 					</div>
+					<div class="header-language header-language_mobile position-relative">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#headerLanguageMobile"
+						        class="header-language_button link-default">
+							<span class="header-language_button__value hstack gap-2">
+								<img src="./assets/images/language/eng.svg" class="img-fluid" alt="">
+								English
+							</span>
+							<img src="./assets/images/icons/arrow-down.svg" class="img-fluid" alt="">
+						</button>
+						<div class="collapse" id="headerLanguageMobile" data-bs-parent="#header">
+							<ul class="header-language_list transition-default position-absolute">
+								<li>
+									<a href="" class="active">
+										<span>
+											English
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span>
+											Русский
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span>
+											Bahasa Indonesia
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span>
+											Tiếng Việt
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<div class="header-app transition-default">
 						<a href="" class="button-theme button-theme_primary">
 							<img src="./assets/images/icons/export.svg" alt="">
 							Go to App
 						</a>
 					</div>
+					<div class="header-based">
+						<img src="./assets/images/based-on-ton.svg" class="img-fluid" alt="">
+					</div>
 				</div>
+			</div>
+			<div class="header-hamburger">
+				<button type="button" class="link-default hamburger-button" id="hamburgerButton">
+					<i></i>
+					<i></i>
+					<i></i>
+				</button>
 			</div>
 		</div>
 	</div>
+	<div class="header-overlay" id="headerOverlay"></div>
 </header>
 
 <div id="main" class="main">
 	<div class="section-hero">
 		<div class="container">
 			<div class="hero-video position-relative">
-				<video autoplay="" loop="" playsinline="" preload="auto" muted=""
+				<video class="d-none d-lg-block" autoplay="" loop="" playsinline="" preload="auto" muted=""
 				       poster="./assets/images/video/poster-video-desktop.jpg">
 					<source src="./assets/images/video/video-desktop.mp4">
+				</video>
+				<video class="d-block d-lg-none" autoplay="" loop="" playsinline="" preload="auto" muted=""
+				       poster="./assets/images/video/poster-video-mobile.jpg">
+					<source src="./assets/images/video/video-mobile.mp4">
 				</video>
 				<div class="hero-video_overlay hero-video_overlay__bottom"></div>
 				<div class="hero-video_overlay hero-video_overlay__left"></div>
@@ -201,7 +282,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="section-introduction section-gap">
+	<div class="section-introduction section-gap" id="what-is-candy-swap">
 		<div class="container">
 			<div class="section-heading">
 				<div class="heading-sub">
@@ -339,7 +420,7 @@
 				</div>
 			</div>
 			<div class="mt-5">
-				<div class="row g-4 row-cols-lg-3">
+				<div class="row justify-content-center justify-content-lg-start g-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
 					<div class="col">
 						<div class="futures-card">
 							<div class="futures-card_number">
@@ -475,7 +556,7 @@
 				</div>
 			</div>
 			<div class="mt-5">
-				<div class="row g-4 row-cols-lg-3">
+				<div class="row g-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
 					<div class="col">
 						<div class="benefits-card">
 							<div class="benefits-card_content">
@@ -530,7 +611,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="section-explore section-gap">
+	<div class="section-explore section-gap" id="explore">
 		<div class="container">
 			<div class="section-heading">
 				<div class="heading-sub">
@@ -541,7 +622,7 @@
 				</div>
 			</div>
 			<div class="mt-5">
-				<div class="row g-4 row-cols-lg-3">
+				<div class="row g-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
 					<div class="col">
 						<div class="explore-card">
 							<div class="explore-card_image">
@@ -612,13 +693,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="section-dev section-gap">
+	<div class="section-dev section-gap" id="developers">
 		<div class="container">
 			<div class="section-heading">
 				<div class="heading-title">Developers and liquidity providers</div>
 			</div>
 			<div class="mt-5">
-				<div class="row g-4 row-cols-lg-3">
+				<div class="row g-4 row-cols-lg-3 row-cols-md-2 row-cols-1">
 					<div class="col">
 						<div class="dev-item position-relative overflow-hidden hstack justify-content-between">
 							<div class="dev-item_title">
@@ -667,7 +748,7 @@
 				<form action="">
 					<div class="row justify-content-center">
 						<div class="col-lg-6 col-xl-5">
-							<div class="hstack gap-15px">
+							<div class="d-flex flex-lg-row flex-column gap-15px">
 								<div class="form-floating w-100">
 									<input type="email" class="form-control"
 									       id="" placeholder="Email address">
@@ -757,6 +838,234 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<footer class="footer" id="footer">
+	<div class="container">
+		<div class="footer-top">
+			<div class="row g-4">
+				<div class="col-lg-3">
+					<div class="footer-item">
+						<a href="" class="footer-logo d-inline-flex align-middle">
+							<img src="./assets/images/logo-white.png" alt="" height="40"
+							     class="w-auto mw-100">
+						</a>
+						<div class="footer-text">
+							Instantly swap Toncoin for any coin or token at the best rate
+						</div>
+						<div class="footer-language position-relative">
+							<button type="button" class="footer-language_button link-default">
+								<span class="footer-language_button__value hstack gap-2">
+									<img src="./assets/images/language/eng.svg" class="img-fluid" alt="">
+									ENG
+								</span>
+								<img src="./assets/images/icons/arrow-down.svg" class="img-fluid" alt="">
+							</button>
+							<ul class="footer-language_list transition-default position-absolute">
+								<li>
+									<a href="" class="active">
+										<span>
+											English
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span>
+											Русский
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span>
+											Bahasa Indonesia
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span>
+											Tiếng Việt
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="row g-4">
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="footer-item">
+								<div class="footer-title">
+									Tools
+								</div>
+								<div class="footer-list">
+									<a href="" class="footer-list_item">
+										Trade/Swap
+									</a>
+									<a href="" class="footer-list_item">
+										Pools
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="footer-item">
+								<div class="footer-title">
+									STON.fi
+								</div>
+								<div class="footer-list">
+									<a href="" class="footer-list_item">
+										User guide
+									</a>
+									<a href="" class="footer-list_item">
+										Blog
+									</a>
+									<a href="" class="footer-list_item">
+										Whitepaper
+									</a>
+									<a href="" class="footer-list_item">
+										Brand Kit
+									</a>
+									<a href="" class="footer-list_item">
+										Terms of use
+									</a>
+									<a href="" class="footer-list_item">
+										Privacy policy
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-6">
+							<div class="footer-item">
+								<div class="footer-title">
+									Developers
+								</div>
+								<div class="footer-list">
+									<a href="" class="footer-list_item">
+										Documentation
+									</a>
+									<a href="" class="footer-list_item">
+										Github
+									</a>
+									<a href="" class="footer-list_item">
+										Grant program
+									</a>
+								</div>
+							</div>
+							<div class="footer-item">
+								<div class="footer-title">
+									Support
+								</div>
+								<div class="footer-list">
+									<a href="" class="footer-list_item">
+										Contact us
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="footer-item">
+						<div class="footer-title">
+							Community
+						</div>
+						<div class="footer-text">
+							Join our growing community
+						</div>
+						<div class="footer-subscribe">
+							<form action="">
+								<input type="email" class="form-control"
+								       id="" placeholder="Email address">
+								<button type="submit" class="button-theme button-theme_primary">Subscribe
+								</button>
+							</form>
+						</div>
+						<div class="footer-social">
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/telegram.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/chat.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/twitter.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/github.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/discord.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/reddit.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/linkedin.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+							<div class="social-item">
+								<div class="social-item_image">
+									<img src="./assets/images/social/youtube.svg" class="img-fluid" alt="">
+								</div>
+								<a href="" class="stretched-link"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-copyright">
+				<div class="row g-4">
+					<div class="col-sm-6">
+						<img src="./assets/images/based-on-ton.svg" class="img-fluid" alt="">
+					</div>
+					<div class="col-sm-6 text-start text-sm-end">
+						© 2024 STON.fi
+					</div>
+				</div>
+			</div>
+			<div class="footer-term">
+				Disclaimer: Nothing on this site is investment advice. All information is for informational purposes
+				only. You should not construe any such information or other material as legal, tax, investment,
+				financial, or other advice. Nothing contained on our site constitutes a solicitation, recommendation,
+				endorsement, or offer by STON.fi or any third party service provider to buy or sell any assets, digital
+				coins and tokens, securities or other financial instruments in this or in in any other jurisdiction in
+				which such solicitation or offer would be unlawful under the securities laws of such jurisdiction.
+				Please view Terms of use for more information.
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="app-sticky">
+	<a href="" class="button-theme button-theme_primary">
+		Go to App
+	</a>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>

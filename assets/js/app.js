@@ -27,7 +27,7 @@ let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction =
 
 		if ($firstItem) {
 			$objParentAttr = {
-				'data-bs-parent': '#' + $parentID
+				'data-bs-parent': '#header'
 			}
 
 			$objChildrenAttr = {};
@@ -87,7 +87,7 @@ let handleCallMenu = function () {
 				$body.removeClass('is-overflow');
 			}
 
-			$('#headerNavigation ul').collapse('hide');
+			$('#header-navigation ul').collapse('hide');
 		} else {
 			if ($toggle) {
 				$body.addClass('is-navigation is-overflow')
@@ -109,6 +109,13 @@ let handleCallMenu = function () {
 				handleBody();
 			});
 		}
+
+		const $hamburgerSecond = $('#hamburgerSecond');
+		if ($hamburgerSecond.length) {
+			$hamburgerSecond.off('click').on('click', function () {
+				$hamburger.trigger('click');
+			});
+		}
 	} else {
 		handleBody();
 	}
@@ -125,14 +132,14 @@ const handleStickHeader = function () {
 }
 
 const handleHeader = function () {
-	handleApplyCollapse($('#headerNavigation > ul'), true, true);
+	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
 	handleStickHeader();
 	$(window).resize(function () {
 		let newWindowWidth = $('body').width();
 		if (newWindowWidth !== windowWidth) {
 			windowWidth = newWindowWidth;
-			handleApplyCollapse($('#headerNavigation > ul'));
+			handleApplyCollapse($('#header-navigation > ul'));
 			handleCallMenu();
 		}
 	});
@@ -153,7 +160,6 @@ const handleSwiper = function (elm, obj = {}) {
 
 $(function () {
 	handleHeader();
-
 
 	if ($('#sliderWallet').length > 0) {
 		const elmSwiper = '#sliderWallet';
